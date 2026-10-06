@@ -1,0 +1,28 @@
+- Booking  tickets for a blockbuster mobvie , log into thge system, browse trhough avaiavable showtimes,
+select seats, and proceed to book them, withinmoments;the tickets are confirmed and yo ureceived digital ticket
+
+-> payment? not to be impelemented
+-> Can users book and find tickets across different cinemas? Yes
+-> does system allow scheduling multiploe screenis of the same movie accros different rooms and times? yes seach movie can have different multiuple screenmis
+-> different price tiers? YEs normal, premium, VIP affecting ticket price
+-> can user book multiple tickets in the order? _> yes system calculate total cost by summing prices
+-> What happens when a user books a ticket for a specific seat? the system should create a ticket with the screening, seat and price based on the seat pricing strategy the nadd it to the screening ticket list
+marking the seat as booked
+
+-> Each Cinema is located at a specific location and contains multiple rooms
+- movies can have multiple screening scheduld across different rooms, cinemas and times slots
+- users can find a dn book avaialoble tcickets
+a ticket represe4nts a specific seat to wathc a movie in ar oom at a particular time
++a suer can book multiple tickets within the same order
+the toal cost for an order is computed by summing the prices of al lselected seats
+
+OBJECTS:
+Movie: time, duration, title
+Cinema: rooms, movies
+room: layouts
+Layout: seats 
+Seat: tier, booked 
+Screening: customer choice for a movie, seat and schedule
+order: tickets
+
+ 

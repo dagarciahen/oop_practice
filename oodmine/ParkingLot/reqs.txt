@@ -1,0 +1,17 @@
+ParkingLot where when a vehicle enter the lot a ticket is issued with the entry time, 
+there will be 3 types of vehicles, Car, MotorCycle and Truck each one with a different size 
+small, medium and large
+there are 3 different spots compact. medium ,large
+The system should find an available spot that suits for the vehicle the first one and assing to the vehicle
+then calculate the price or fare to pay at the exit according with entry.
+The system must scale to support lage parking lots with many spots and vehicles --> Usar diccionario en lugar de listas lineales busquedas en o(1)
+The system must reliably track spot  assignments and ticket details to ensure accurae operations --> bidireccional con dicts, 
+
+OBJETOS
+Vehicle: vehicle that needs spot, encapusalte licenseplate and size (Small, medium, large)
+spot: spot that can be occupied by a vehicle(compact, medium, large)
+Ticket: Parking ticket issued when a vehicle enter the ParkingLot store ticketId, the associated vehicle, the associated parked and entry and lkeave time
+ParkingManager: Allocates the vehicle in a right ParkingSpot, manage lookup and release of ParkingSpot instances,  ensure the vehicle gets the right spot based on size and updates system when vehicle leaves
+
+ParkingLot: Is a Facade as a central interface to manage system key functionalities, vehicle entry, spot assignment, ticketing, and fee calculation. -> its logic is lightweight as is delegated to ParkingManager nad FareCalculator
+

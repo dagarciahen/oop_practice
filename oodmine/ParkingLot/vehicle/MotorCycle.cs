@@ -2,22 +2,20 @@ namespace vehicle;
 
 public class MotorCycle : Vehicle
 {
-    private string _licensePlate;
-
+    private readonly string _licensePlate;
     public MotorCycle(string licensePlate)
     {
         _licensePlate = licensePlate;
     }
-
-    public override string licensePlate => _licensePlate;
-    public override VehicleSize getVehicleSize() 
+    
+    public override string getLicensePlate()
     {
-        return VehicleSize.SMALL;
-
+        return _licensePlate; 
     }
 
-
-
-
+    public override VehicleSize getVehicleSize()
+    {
+        return VehicleSize.LARGE;
+    }
 
 }

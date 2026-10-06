@@ -1,20 +1,25 @@
 using vehicle;
+
 namespace spot;
 
 public interface IParkingSpot
 {
-    public bool isAvailable();
-    public void vaccate();
-    public void occupy(Vehicle vehicle);
-    public VehicleSize spotSize {get;}
+    int SpotNumber {get;}
+    Vehicle SpotSize {get;}
+    bool isAvailable();
+    void occupy(Vehicle vehicle);
+    void vaccate();
+
+
 
 }
-
-public abstract class ParkingSpot : IParkingSpot
-{    
+public abstract class ParkingSpot
+{
+    public abstract int SpotNumber {get;}
+    public abstract VehicleSize SpotSize {get;}
     public abstract bool isAvailable();
-    public abstract void vaccate();
     public abstract void occupy(Vehicle vehicle);
-    public abstract VehicleSize spotSize {get;}
-    public abstract int getSpotNumber();
+    public abstract void vaccate();
+
+
 }
