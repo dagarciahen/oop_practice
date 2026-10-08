@@ -1,0 +1,7 @@
+El enfoque pesimista consiste en bloquear el recurso antes de la situacion critica, la operacion critica es q muchos
+reservan la misma  butaca. La aparto desde antes
+
+high Contention -> singifica mucha competencia concurrenete por el mismo recurso (preventa popular)
+el enfoque pesimista suele ser mejor porque evita el overselling y reducen la race entre threadins 
+costo -> mas locks, mas expiraciones, mas complejigdad
+
